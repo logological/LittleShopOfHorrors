@@ -1,0 +1,44 @@
+Little Shop of Horrors Sysop Instructions
+-----------------------------------------
+
+LSOH requires the following information for the drop file:
+
+User name      - string (alphanumeric ONLY - no symbols)
+User number - integer
+Time left - integer
+ANSI colour - flag    0=off     1=on
+Local/remote- flag    0=remote  1=local
+Sysop access- flag    0=no      1=yes
+Sysop in/out- flag    0=out     1=in
+
+
+The following files MUST be in the directory that LSOH was loaded
+from:
+
+LSTITLE .ANS
+LSTITLE .ASC
+LSMENU  .ANS
+LSMENU  .ASC
+LSSTATS .DAT
+LSINFO  .LSD
+LSREICH .LSD
+LSQUIT  .LSD
+LSCHAT  .ANS
+LSCHAT  .ASC
+
+
+To reset the game, simply delete the file LSSTATS.DAT and have the
+game run by someone with sysop access.  The game will ask how many
+players are allowed, valid numbers being 4 to 40.  It will then ask
+how many turns per day are allowed, valid answers being 1 to 30. 
+The suggested settings are 30 and 10 respectively.
+
+
+The following function keys can be used by the sysop when a user is
+online:
+
+F5 - Toggle sysop is in/out
+F6 - DOS shell (places user on hold)
+F7 - Break into chat.  ESC exits.
+F8 - Save stats & load BBS (forced quit)
+F9 - Hang up, don't save stats, load BBS (forced logoff)
