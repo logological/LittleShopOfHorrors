@@ -207,6 +207,7 @@ zip "éYou slashed a limb offï!" + m$ + plant$(a) + " êfeasts noisilyï..." + m$
 limbs%(x) = limbs%(x) - 1: blood%(a) = blood%(a) + INT(RND * 100)
 IF limbs%(x) < 1 THEN plantkilled x%
 END IF
+END IF
 petalpushers
 END SUB
 
@@ -313,7 +314,7 @@ zip plant$(x%) + " êsubdued ï" + plant$(a) + "!ê" + m$
 zip m$ + "Your plant was too weakï!" + m$
 news "ï" + plant$(x%) + " êwas too strongï!"
 IF y% < z% * .2 THEN zip "êYour plant got killedï!": news "ï" + plant$(x%) + " êkilled ï" + plant$(a) + "!": plantdies
-
+END IF
 END SUB
 
 SUB endgame
